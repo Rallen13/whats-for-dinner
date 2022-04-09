@@ -1,6 +1,8 @@
 // query selector variables go here 👇
 
-var letsCook = document.querySelector(".button")
+var letsCook = document.querySelector(".button");
+var recipe = document.querySelector(".recipe");
+var radioButtons = document.querySelectorAll("input[name='option']");
 
 // we've provided you with some data to work with 👇
 var sides = [
@@ -53,7 +55,21 @@ var desserts = [
 
 // event listeners go here 👇
 
+letsCook.addEventListener("click", displayRecipe);
+
 // functions and event handlers go here 👇
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
+}
+
+function displayRecipe() {
+  var selectedOption;
+  for (var i = 0; i < radioButtons.length; i++) {
+      if (radioButtons[i].checked) {
+          selectedOption = radioButtons[i].value;
+          break;
+      }
+  }
+  // show the output:
+  recipe.innerText = selectedOption ? `You selected ${selectedOption}` : `You haven't selected a recipe`;
 }
