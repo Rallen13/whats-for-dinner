@@ -51,6 +51,18 @@ body {
   margin: auto;
 }
 
+.recipe-intro {
+  font-style: italic;
+  margin: 0;
+  text-align: center;
+}
+
+.recipe-title {
+  font-size: 3rem;
+  margin: 0;
+  text-align: center;
+}
+
 .option-input {
   padding: .50rem 0;
 }

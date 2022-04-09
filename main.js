@@ -70,6 +70,10 @@ function displayRecipe() {
           break;
       }
   }
+  var recipeHTML = `
+    <p class="recipe-intro">You should make:</p>
+    <h2 class="recipe-title">${selectedOption}!</h2>
+  `
   // show the output:
-  recipe.innerText = selectedOption ? `You selected ${selectedOption}` : `You haven't selected a recipe`;
+  recipe.innerHTML = selectedOption ? `${recipeHTML}` : `You haven't selected a recipe`;
 }
