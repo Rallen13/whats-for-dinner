@@ -10,7 +10,6 @@ red - #ee5253
 body {
   font-family: 'Roboto', sans-serif;
   color: #3D3D3D;
-  margin: 0;
 }
 
 .nav-bar {
@@ -32,6 +31,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   height: 100%;
+  padding: 0 2rem;
 }
 
 .white-box {
@@ -40,6 +40,10 @@ body {
   width: 24rem;
   height: 16rem;
   display: inline-grid;
+}
+
+.recipe {
+  margin: auto;
 }
 
 .cookpot {
@@ -57,5 +61,5 @@ body {
   border-radius: 0.25rem;
   width: 10rem;
   padding: 0.5rem;
-  margin-top: 0.5rem;
+  margin: 0.5rem 0;
 }
