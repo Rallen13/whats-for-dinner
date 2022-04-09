@@ -3,32 +3,31 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
-  <body background="assets/burger-friends.jpg">
-    <nav>
-      <h1>What's for Dinner?</h1>
-      <button type= "addRecipe">ADD A RECIPE</button>
+  <body>
+    <nav class="nav-bar">
+      <h1 class="nav-title">What's for Dinner?</h1>
     </nav>
-    <div>
-      <div>
+    <div class="content">
+      <div class="white-box">
         <h2>What are you looking for?</h2>
-        <input type="radio" id="side"
-        name="side" value="side">
-        <label for="side">Side</label>
-        <input type="radio" id="mainDish"
-       name="Main Dish" value="mainDish">
-        <label for="mainDish">Main Dish</label>
-        <input type="radio" id="dessert"
-         name="Dessert" value="dessert">
-        <label for="dessert">Dessert</label>
-        <input type="radio" id="entireMeal"
-         name="Entire Meal" value="entireMeal">
-        <label for="entireMeal">Entire Meal</label>
+        <div class="option-input">
+          <input type="radio" id="side" name="side" value="side">
+          <label for="side">Side</label>
+        </div>
+        <div class="option-input">
+          <input type="radio" id="main-dish" name="Main Dish" value="mainDish">
+          <label for="main-dish">Main Dish</label>
+        </div>
+        <div class="option-input">
+          <input type="radio" id="dessert" name="Dessert" value="dessert">
+          <label for="dessert">Dessert</label>
+        </div>
         <button type="cook">LET'S COOK!</button>
       </div>
-      <div>
-        <img src="assets/cookpot.svg"/>
+      <div class="white-box">
+        <img src="assets/cookpot.svg" class="cookpot" />
       </div>
-    <div>
+    </div>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
