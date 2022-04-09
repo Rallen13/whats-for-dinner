@@ -42,7 +42,7 @@ body {
   display: inline-grid;
 }
 
-.recipe {
+.recipe-container {
   margin: auto;
 }
 
@@ -58,7 +58,7 @@ body {
 }
 
 .recipe-title {
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 0;
   text-align: center;
 }

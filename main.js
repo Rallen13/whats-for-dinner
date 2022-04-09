@@ -1,57 +1,60 @@
 // query selector variables go here 👇
 
 var letsCook = document.querySelector(".button");
-var recipe = document.querySelector(".recipe");
-var radioButtons = document.querySelectorAll("input[name='option']");
+var recipeContainer = document.querySelector(".recipe-container");
+var recipeTypes = document.querySelectorAll("input[name='recipeType']");
 
 // we've provided you with some data to work with 👇
-var sides = [
-"Miso Glazed Carrots",
-"Coleslaw",
-"Garden Salad",
-"Crispy Potatoes",
-"Sweet Potato Tots",
-"Coconut Rice",
-"Caeser Salad",
-"Shrimp Summer Rolls",
-"Garlic Butter Mushrooms",
-"Hush Puppies",
-]
-var mains = [
-"Spaghetti and Meatballs",
-"Pineapple Chicken",
-"Shakshuka",
-"Thai Yellow Curry",
-"Bibimbap",
-"Chicken Parmesean",
-"Butternut Squash Soup",
-"BBQ Chicken Burgers",
-"Ramen",
-"Empanadas",
-"Chicken Fried Rice",
-"Sheet Pan Fajitas",
-"Margarita Pizza",
-]
-var desserts = [
-"Apple Pie",
-"Lemon Meringue Pie",
-"Black Forest Cake",
-"Banana Bread",
-"Peach Cobbler",
-"Cheesecake",
-"Funfetti Cake",
-"Baklava",
-"Flan",
-"Macarons",
-"Macaroons",
-"Chocolate Cupcakes",
-"Pavlova",
-"Pumpkin Pie",
-"Key Lime Pie",
-"Tart Tatin",
-"Croissants",
-"Eclairs",
-]
+
+var recipes = {
+  sides: [
+  "Miso Glazed Carrots",
+  "Coleslaw",
+  "Garden Salad",
+  "Crispy Potatoes",
+  "Sweet Potato Tots",
+  "Coconut Rice",
+  "Caeser Salad",
+  "Shrimp Summer Rolls",
+  "Garlic Butter Mushrooms",
+  "Hush Puppies",
+],
+  mains: [
+  "Spaghetti and Meatballs",
+  "Pineapple Chicken",
+  "Shakshuka",
+  "Thai Yellow Curry",
+  "Bibimbap",
+  "Chicken Parmesean",
+  "Butternut Squash Soup",
+  "BBQ Chicken Burgers",
+  "Ramen",
+  "Empanadas",
+  "Chicken Fried Rice",
+  "Sheet Pan Fajitas",
+  "Margarita Pizza",
+],
+  desserts: [
+  "Apple Pie",
+  "Lemon Meringue Pie",
+  "Black Forest Cake",
+  "Banana Bread",
+  "Peach Cobbler",
+  "Cheesecake",
+  "Funfetti Cake",
+  "Baklava",
+  "Flan",
+  "Macarons",
+  "Macaroons",
+  "Chocolate Cupcakes",
+  "Pavlova",
+  "Pumpkin Pie",
+  "Key Lime Pie",
+  "Tart Tatin",
+  "Croissants",
+  "Eclairs",
+],
+}
 
 // event listeners go here 👇
 
@@ -63,17 +66,25 @@ function getRandomIndex(array) {
 }
 
 function displayRecipe() {
-  var selectedOption;
-  for (var i = 0; i < radioButtons.length; i++) {
-      if (radioButtons[i].checked) {
-          selectedOption = radioButtons[i].value;
+  var selectedType;
+
+  for (var i = 0; i < recipeTypes.length; i++) {
+      if (recipeTypes[i].checked) {
+          selectedType = generateRandomRecipe(recipeTypes[i].value);
           break;
       }
   }
+
   var recipeHTML = `
     <p class="recipe-intro">You should make:</p>
-    <h2 class="recipe-title">${selectedOption}!</h2>
+    <h2 class="recipe-title">${selectedType}!</h2>
   `
-  // show the output:
-  recipe.innerHTML = selectedOption ? `${recipeHTML}` : `You haven't selected a recipe`;
+
+  recipeContainer.innerHTML = selectedType ? `${recipeHTML}` : `You haven't selected a recipe`;
+}
+
+function generateRandomRecipe(recipeType) {
+  var recipeArray = recipes[recipeType]
+  var randomRecipe = recipeArray[getRandomIndex(recipeArray)]
+  return randomRecipe
 }
