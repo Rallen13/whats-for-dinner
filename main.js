@@ -3,6 +3,7 @@
 var letsCook = document.querySelector(".button");
 var recipeContainer = document.querySelector(".recipe-container");
 var recipeTypes = document.querySelectorAll("input[name='recipeType']");
+var loader = document.querySelector(".loader");
 
 // we've provided you with some data to work with 👇
 
@@ -66,6 +67,7 @@ function getRandomIndex(array) {
 }
 
 function displayRecipe() {
+  startLoader();
   var selectedType;
 
   for (var i = 0; i < recipeTypes.length; i++) {
@@ -74,6 +76,8 @@ function displayRecipe() {
           break;
       }
   }
+
+toggleHidden();
 
   var recipeHTML = `
     <p class="recipe-intro">You should make:</p>
@@ -87,4 +91,13 @@ function generateRandomRecipe(recipeType) {
   var recipeArray = recipes[recipeType]
   var randomRecipe = recipeArray[getRandomIndex(recipeArray)]
   return randomRecipe
+}
+
+function startLoader() {
+  myVar = setTimeout(toggleHidden, 3000);
+}
+
+function toggleHidden() {
+  loader.classList.toggle("hidden");
+  recipeContainer.classList.toggle("hidden");
 }
