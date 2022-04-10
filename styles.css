@@ -51,14 +51,15 @@ body {
 }
 
 .loader {
-  border: 16px solid #f3f3f3;
+  border: 1rem solid #0fb9b1;
   border-radius: 50%;
-  border-top: 16px solid blue;
-  border-right: 16px solid green;
-  border-bottom: 16px solid red;
-  border-left: 16px solid pink;
-  width: 120px;
-  height: 120px;
+  border-top: 1rem solid #053936;
+  border-right: 1rem solid #a1f7f3;
+  border-bottom: 1rem solid #0fb9b1;
+  border-left: 1rem solid #42f0e7;
+  width: 7.5rem;
+  height: 7.5rem;
+  margin: auto;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
