@@ -1,23 +1,58 @@
 # What's for Dinner?
+---
+## Introduction
+---
+What's for dinner? The ultimate question. I built an app that helps users choose a recipe and put together meals. The "Choose Your Own Adventure" I selected was "Intermediate CSS".
 
-## Overview
+The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/dinner.html).
 
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
+## Technologies
+---
+* JavaScript
+* HTML
+* CSS
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+## Illustrations
+---
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/dinner.html). 
 
-## Learning Goals
+## Deployed Page
+---
+* [Whats for dinner?](https://rallen13.github.io/whats-for-dinner/)
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
+## Possible Future Extensions
+---
+* User can add their own recipes
+* User can favorite their own recipes
+* Entire meal functionality
+* Error handling and clear button
+* Login Page
+* User can delete a recipe
+* User will never see repeated recipes
+* View all recipes interface
 
 ## Setup
+---
+* Fork this project to your own Github account
+* Clone the repository to your local machine
+* `cd` into the project
+* Read this README thoroughly, then begin working!
 
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
+## What I Learned / Takeaways
+
+* Gained experience building an application that utilizes HTML, CSS and JavaScript
+* Wrote HTML and CSS to match a provided comp
+* Understand how to listen to and respond to user events
+* How to add a loading animation using CSS Keyframes, and a Javascript timeout function
+* How to make my button change color when a user hovers over it
+* How to use fade-in-fade-out using CSS Keyframes
+
+## Sources
+---
+* [A Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [CSS Tricks](https://css-tricks.com/almanac/)
+* [w3schools](https://www.w3schools.com/)
+
+## Contributors
+---
+* [Rachel Allen](https://github.com/Rallen13)
