@@ -77,7 +77,7 @@ function displayRecipe() {
 
   var recipeHTML = `
     <p class="recipe-intro">You should make:</p>
-    <h2 class="recipe-title">${selectedType}!</h2>
+    <h2 class="recipe-title fade-in-fade-out">${selectedType}!</h2>
   `
 
   recipeContainer.innerHTML = selectedType ? `${recipeHTML}` : `You haven't selected a recipe`;

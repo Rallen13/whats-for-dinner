@@ -5,8 +5,16 @@ teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
-
 */
+@keyframes fade-inout {
+  0%{ opacity: 0;}
+  100%{ opacity: 1;}
+}
+
+.fade-in-fade-out {
+  animation: fade-inout 3s;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: #3D3D3D;
